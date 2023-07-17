@@ -20,7 +20,7 @@
     {#each distribution_data as d, id}
         <div>
             <span>{id}</span>
-            <WeightValueRange bind:val_low={d.val_low} bind:val_high={d.val_high} bind:weight_low={d.weight_low} bind:weight_high={d.val_high}/>
+            <WeightValueRange bind:val_low={d.val_low} bind:val_high={d.val_high} bind:weight_low={d.weight_low} bind:weight_high={d.weight_high}/>
             <input type="range" name="" id="share" bind:value={d.share}>
             <button on:click={() => removeDistributionAt(id)}>Remove</button>
         </div>
