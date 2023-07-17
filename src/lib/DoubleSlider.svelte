@@ -4,5 +4,5 @@
     export let lower = 1;
     export let higher = 10;
 </script>
-<input type="range" name="" id="low" {min} {max} value={lower}>
-<input type="range" name="" id="high" {min} {max} value={higher}>
+<input type="range" name="" id="low" {min} {max} bind:value={lower}>
+<input type="range" name="" id="high" {min} {max} bind:value={higher}>

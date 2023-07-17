@@ -7,5 +7,5 @@
     export let val_high = 10;
 </script>
 
-<DoubleSlider lower={weight_low} higher={weight_high}/>
-<DoubleSlider lower={val_low} higher={val_high}/>
+<DoubleSlider bind:lower={weight_low} bind:higher={weight_high}/>
+<DoubleSlider bind:lower={val_low} bind:higher={val_high}/>

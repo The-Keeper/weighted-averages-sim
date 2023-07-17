@@ -1,16 +1,14 @@
 <script lang="ts">
-    import WeightValueDistributionViewer from "$lib/WeightValueDistributionViewer.svelte";
-    import type {DistributionData, WeightValueDistribution} from "$lib/types";
-    let distribution_data: DistributionData = new Array();
+    import type { DistributionData } from "$lib/types";
+	import WeightValueDistributionEditor from "$lib/WeightValueDistributionEditor.svelte";
 
-    function addDistribution() {
-        let distr: WeightValueDistribution = {val_low: 1, val_high: 10, weight_low: 1, weight_high: 10, share: 0};
-        distribution_data =  [...distribution_data, distr];
-    }
-    $: total_count = distribution_data.length;
-
+    let distribution_data: DistributionData;
+    $: stringified_data = JSON.stringify(distribution_data); 
 </script>
-<h1>Total distribtions: {total_count}</h1>
 
-<WeightValueDistributionViewer {distribution_data} />
-<button on:click={addDistribution}> Add Data </button>
+<div>
+    <WeightValueDistributionEditor bind:distribution_data />
+</div>
+<div>
+    {stringified_data}
+</div>
