@@ -3,7 +3,7 @@
     import type {WeightValueDistribution} from "$lib/types";
 
     function addDistribution() {
-        let distr: WeightValueDistribution = {val_low: 1, val_high: 10, weight_low: 1, weight_high: 10, share: 0};
+        let distr: WeightValueDistribution = {val_low: 1, val_high: 10, weight_low: 1, weight_high: 10, share: 50};
         distribution_data =  [...distribution_data, distr];
     }
 

@@ -7,3 +7,5 @@ export interface WeightValueDistribution {
 }
 
 export type DistributionData = Array<WeightValueDistribution>;
+//                               weight  value  r a c
+export type InputData        =  [number, number][][][]
