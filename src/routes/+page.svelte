@@ -21,5 +21,6 @@
     <span>Criteria Number:</span> <input type="number" bind:value={criteria_number} min="1" max="100" />
 </div>
 
-<div>{generated_data}</div>
-<div>{generated_data[0][0][0]}</div>
+<div style="max-width: 100%; overflow-wrap: break-word">
+    <p>{generated_data}</p>
+</div>
